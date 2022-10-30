@@ -5,6 +5,9 @@ const Button = ({ title, onClick, varient }) => {
     <button
       title={title}
       onClick={onClick}
+      name='Disabled'
+      disabled
+      aria-disabled
     >
       {title}
     </button>

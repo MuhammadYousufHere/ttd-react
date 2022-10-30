@@ -35,7 +35,8 @@ test('Label of button', function () {
 // ---> queryByRole('button', { exact: false })
 
 test('Check for disabled button', function () {
-  const button = screen.getByRole('button', { name: 'Disabled' });
+  const view = render(<Button />);
+  const button = screen.getByRole('button');
   expect(button).toBeDisabled();
   expect(button).toHaveAttribute('disabled');
   expect(button).toHaveAttribute('aria-disabled');
