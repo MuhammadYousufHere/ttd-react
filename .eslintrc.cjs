@@ -6,10 +6,13 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
+    'plugin:testing-library/react',
     'prettier',
     'airbnb'
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'src/assets/*'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh', 'jest'],
   rules: {
