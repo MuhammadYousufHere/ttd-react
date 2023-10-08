@@ -8,7 +8,8 @@ export default {
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/mocks/fileMock.js',
-    '\\.(css|less)$': '<rootDir>/__mocks__/styles.ts'
+    '\\.(css|less)$': '<rootDir>/__mocks__/styles.ts',
+    axios: 'axios/dist/node/axios.cjs'
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
 }
