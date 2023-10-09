@@ -1,8 +1,10 @@
-import { Routes } from 'react-router-dom'
-import BrowserRouter from '../common/BrowserRouter'
-import { history } from '../common/history'
-import App from '../App'
+import { Route, Routes } from 'react-router-dom'
+import { Home } from '../pages'
 
 export default function AppRoutes() {
-  return <Routes></Routes>
+  return (
+    <Routes>
+      <Route element={<Home />} path='/' />
+    </Routes>
+  )
 }
