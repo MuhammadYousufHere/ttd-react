@@ -1,17 +1,16 @@
 import BrowserRouter from './common/BrowserRouter'
+import AppRoutes from './routes/AppRoutes'
 import { history } from './common/history'
 import './App.css'
+import { Provider as ReduxProvider } from 'react-redux'
+import { store } from './store'
 
 function App() {
   return (
     <BrowserRouter history={history}>
-      <h1>Hello world! I am using React</h1>
-      <div className='input-group'>
-        <label htmlFor='love'>
-          Do You Love Testing?
-          <input type='checkbox' name='love' id='love' />
-        </label>
-      </div>
+      <ReduxProvider store={store}>
+        <AppRoutes />
+      </ReduxProvider>
     </BrowserRouter>
   )
 }

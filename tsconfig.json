@@ -1,20 +1,30 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "module": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "strictNullChecks": true,
     "skipLibCheck": true,
-
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     /* Bundler mode */
-    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
+    "baseUrl": ".",
+    "types": ["jest"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "pages/*": ["./src/pages/*"],
+      "components/*": ["./src/components/*"],
+      "assets/*": ["./src/assets/*"],
+      "@types/*": ["./src/@types/*"]
+    },
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -22,5 +32,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src", "jest.setup.ts"],
+  "exclude": ["node_modules", "build", "scripts", "jest", "./src/__mocks__/**"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
