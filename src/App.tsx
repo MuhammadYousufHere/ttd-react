@@ -1,9 +1,9 @@
 import BrowserRouter from './common/BrowserRouter'
 import AppRoutes from './routes/AppRoutes'
 import { history } from './common/history'
-import './App.css'
 import { Provider as ReduxProvider } from 'react-redux'
 import { store } from './store'
+import './App.css'
 
 function App() {
   return (
