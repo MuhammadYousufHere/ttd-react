@@ -1,0 +1,16 @@
+.task_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: stretch;
+}
