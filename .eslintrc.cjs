@@ -14,8 +14,44 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'src/assets/*'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'jest'],
+  plugins: ['react-refresh', 'jest', 'react-hooks'],
   rules: {
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
-  }
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react/display-name': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-use-before-define': ['off'],
+    '@typescript-eslint/consistent-type-exports': 'error',
+    'no-console': [
+      'error',
+      {
+        allow: ['warn', 'error']
+      }
+    ],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal'],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before'
+          }
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true
+        }
+      }
+    ]
+  },
+  overrides: [
+    {
+      files: ['*.spec.js', '*.spec.ts', '*.spec.tsx'],
+      env: {
+        jest: true
+      }
+    }
+  ]
 }
